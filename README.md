@@ -9,6 +9,7 @@ Aplikacija je razvijena upotrebom frontend okruženja Angular 18
 Pored toga korišćene su sledeće biblioteke:
 
 -[Angular Material](https://material.angular.io/)
+
 -[Sweet Alerts 2](https://sweetalert2.github.io/)
 
 ## Struktura aplikacije
