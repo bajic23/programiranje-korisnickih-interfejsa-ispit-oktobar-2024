@@ -9,3 +9,14 @@
   p{
     color: white !important;
   }
+  .slika{
+    height: 400px;
+  }
+  .container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+  }
+  .title{
+    color: white;
+  }
