@@ -15,7 +15,6 @@
   .container{
     display: flex;
     justify-content: space-evenly;
-    background-color: black;
   }
   .title{
     color: white;
