@@ -17,12 +17,23 @@
   .title{
     color: white;
   }
-  ::ng-deep .lista {
-    margin: 0 !important;
-    padding: 0 !important;
+  
+
+.lista {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-::ng-deep .lista mat-list-item {
-    margin-bottom: -15px !important; 
-    padding: 0 !important; 
+.lista mat-list-item {
+  margin-bottom: -17px !important; 
+  padding: 0 !important; 
 }
+.search-card{
+  width: 40%;
+}
+.search-form{
+  height: -25px;
+  display: flex;
+  justify-content: left;
+}
+
