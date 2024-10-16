@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SearchContainerComponent } from '../search-container/search-container.component';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [],
+  imports: [SearchContainerComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
@@ -12,6 +13,8 @@ export class SearchComponent implements OnInit {
 
    public directors: string[] = []
    public movies: string[] = []
+   public actors: string[] = []
+   public dates: string[] = []
    
 
   constructor( private route: ActivatedRoute){
@@ -22,6 +25,8 @@ export class SearchComponent implements OnInit {
      this.route.queryParams.subscribe(params=>{
       this.movies = params['movies']
       this.directors = params['directors']
+      this.actors = params['actors']
+      this.dates = params['dates']
      })
   }
 
