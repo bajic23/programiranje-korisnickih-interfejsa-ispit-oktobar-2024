@@ -28,12 +28,11 @@
   margin-bottom: -17px !important; 
   padding: 0 !important; 
 }
-.search-card{
-  width: 40%;
-}
-.search-form{
-  height: -25px;
+.search-container{
   display: flex;
-  justify-content: left;
+  justify-content: space-evenly;
 }
+
+
+
 

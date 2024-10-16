@@ -1,24 +1,31 @@
-<!-- <div class="search-container"><form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Pretraga</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </form>
-</div> --><mat-card  class="search-card">
-    <mat-card-content>
-        <form class="search-form">
-        <mat-form-field class="example-full-width">
-      <mat-label>Izaberite film</mat-label>
-      <mat-select>
-        <mat-option [value]="movie" *ngFor="let movie of movies">{{movie}}</mat-option>
-      </mat-select>
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-  <mat-card-actions>
-    <button mat-button><i class="fa-solid fa-magnifying-glass"></i>  Pretraga</button>
-  </mat-card-actions>
-</mat-card>
+<div class="search-container">
+    <mat-card class="search-card">
+        <mat-card-content class="search-content">
+            <form class="search-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Izaberite film</mat-label>
+                    <mat-select>
+                        <mat-option [value]="movie" *ngFor="let movie of movies">{{movie}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-content class="search-content">
+            <form class="search-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Izaberite režisera</mat-label>
+                    <mat-select>
+                        <mat-option [value]="direc" *ngFor="let direc of directors">{{direc}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button><i class="fa-solid fa-magnifying-glass"></i> Pretraga</button>
+        </mat-card-actions>
+    </mat-card>
+    
+</div>
 
 <div class="container">
     <mat-card class="example-card" appearance="outlined">
@@ -44,7 +51,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -120,8 +127,7 @@
             <mat-card-title class="title">Leteći brod</mat-card-title>
             <mat-card-subtitle>Ruski film</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image class="slika"
-            src="http://www.rodacineplex.com/ikonice/1727367526Ship_poster_(360X528).jpg"
+        <img mat-card-image class="slika" src="http://www.rodacineplex.com/ikonice/1727367526Ship_poster_(360X528).jpg"
             alt="Photo of a movie">
         <mat-card-content>
             <p>
@@ -138,7 +144,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -167,7 +173,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -196,7 +202,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -229,7 +235,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -241,8 +247,7 @@
             <mat-card-title class="title">Megdan: između vode i vatre</mat-card-title>
             <mat-card-subtitle>Domaći film</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image class="slika"
-            src="http://www.rodacineplex.com/ikonice/1724318824Megdan_poster.jpg"
+        <img mat-card-image class="slika" src="http://www.rodacineplex.com/ikonice/1724318824Megdan_poster.jpg"
             alt="Photo of a movie">
         <mat-card-content>
             <p>
@@ -259,7 +264,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -288,7 +293,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
@@ -302,8 +307,7 @@
             <mat-card-title class="title">DŽoker: ludilo u dvoje</mat-card-title>
             <mat-card-subtitle>Američki film</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image class="slika"
-            src="http://www.rodacineplex.com/ikonice/1727733578446x648_SKYLINE.png"
+        <img mat-card-image class="slika" src="http://www.rodacineplex.com/ikonice/1727733578446x648_SKYLINE.png"
             alt="Photo of a movie">
         <mat-card-content>
             <p>
@@ -320,7 +324,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button >
+            <button mat-button>
                 <i class="fa-solid fa-up-right-from-square"></i> REZERVIŠI</button>
             <button mat-button>
                 <i class="fa-solid fa-circle-info"></i> DETALJI</button>
