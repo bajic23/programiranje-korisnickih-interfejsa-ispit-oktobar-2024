@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SearchContainerComponent } from '../search-container/search-container.component';
-import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-search',
@@ -18,9 +17,7 @@ export class SearchComponent implements OnInit {
    public dates: string[] = []
    
 
-  constructor( private route: ActivatedRoute,
-     private dataService: DataService
-  ){
+  constructor( private route: ActivatedRoute){
 
   }
 

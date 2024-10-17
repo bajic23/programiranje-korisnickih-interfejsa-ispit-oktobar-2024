@@ -9,8 +9,6 @@ import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { MovieModel } from '../../models/movie.models';
-import { DataService } from '../services/data.service';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
@@ -25,29 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     NgFor,
     RouterLink,
     NgIf,
-    RouterModule,
-    HttpClientModule
-  ],
+    RouterModule],
   templateUrl: './search-container.component.html',
   styleUrl: './search-container.component.css'
 })
-export class SearchContainerComponent implements OnInit {
-  private dataService: DataService
+export class SearchContainerComponent {
+  @Input() movies: string[] | undefined
+  @Input() actors: string[] | undefined
+  @Input() directors: string[] | undefined
+  @Input() dates: string[] | undefined
 
-  constructor() {
-    this.dataService = new DataService()
-  }
-
-  ngOnInit(): void {
-    this.movies = this.dataService.getMovies()
-    this.directors = this.dataService.getDirectors()
-    this.actors = this.dataService.getActors()
-    this.dates = this.dataService.getDates()
-  }
-  public movies: string[] = []
-  public directors: string[] = []
-  public actors: string[] = []
-  public dates: string[] = []
 }
-
-
