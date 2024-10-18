@@ -1,1 +1,47 @@
-<app-search-container></app-search-container>
+<div class="search-container">
+    <mat-card class="search-card">
+        <mat-card-content class="custom">
+            <form class="search-form">
+                <mat-form-field>
+                    <mat-label>Izaberite film</mat-label>
+                    <mat-select [(value)]="sMovie">
+                        <mat-option [value]="movie" *ngFor="let movie of movies">{{movie}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-content class="search-content">
+            <form class="search-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Izaberite glumce</mat-label>
+                    <mat-select [(value)]="sActor">
+                        <mat-option [value]="actor" *ngFor="let actor of actors">{{actor}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-content class="search-content">
+            <form class="search-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Izaberite režisera</mat-label>
+                    <mat-select [(value)]="sDirector">
+                        <mat-option [value]="direc" *ngFor="let direc of directors">{{direc}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-content class="search-content">
+            <form class="search-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Izaberite datum i vreme</mat-label>
+                    <mat-select [(value)]="sDate">
+                        <mat-option [value]="date" *ngFor="let date of dates">{{date}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button type="button" (click)="doSearch()" ><i class="fa-solid fa-magnifying-glass"></i> Pretraga</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

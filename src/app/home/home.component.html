@@ -4,7 +4,7 @@
             <form class="search-form">
                 <mat-form-field>
                     <mat-label>Izaberite film</mat-label>
-                    <mat-select>
+                    <mat-select [(value)]="sMovie">
                         <mat-option [value]="movie" *ngFor="let movie of movies">{{movie}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -14,7 +14,7 @@
             <form class="search-form">
                 <mat-form-field class="example-full-width">
                     <mat-label>Izaberite glumce</mat-label>
-                    <mat-select>
+                    <mat-select [(value)]="sActor">
                         <mat-option [value]="actor" *ngFor="let actor of actors">{{actor}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -24,7 +24,7 @@
             <form class="search-form">
                 <mat-form-field class="example-full-width">
                     <mat-label>Izaberite režisera</mat-label>
-                    <mat-select>
+                    <mat-select [(value)]="sDirector">
                         <mat-option [value]="direc" *ngFor="let direc of directors">{{direc}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -34,14 +34,14 @@
             <form class="search-form">
                 <mat-form-field class="example-full-width">
                     <mat-label>Izaberite datum i vreme</mat-label>
-                    <mat-select>
+                    <mat-select [(value)]="sDate">
                         <mat-option [value]="date" *ngFor="let date of dates">{{date}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <a mat-button routerLink="['/search']"><i class="fa-solid fa-magnifying-glass"></i> Pretraga</a>
+            <button mat-button type="button" (click)="doSearch()" ><i class="fa-solid fa-magnifying-glass"></i> Pretraga</button>
         </mat-card-actions>
     </mat-card>
 </div>
