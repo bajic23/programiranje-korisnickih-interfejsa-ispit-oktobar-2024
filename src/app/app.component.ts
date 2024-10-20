@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { UserService } from './services/user.service';
+import { NgIf } from '@angular/common';
 
 
 
@@ -13,11 +15,12 @@ import {MatButtonModule} from '@angular/material/button';
     RouterOutlet, 
     MatToolbarModule,
     MatButtonModule, 
-    RouterLink,
+    RouterLink,NgIf
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'programiranje-korisnickih-interfejsa-ispit-oktobar-2024';
+  public userService: UserService = UserService.getInstance()
 }

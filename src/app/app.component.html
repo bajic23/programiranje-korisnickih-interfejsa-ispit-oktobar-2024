@@ -1,8 +1,10 @@
 <mat-toolbar color="primary">
   <span><i class="fa-solid fa-ticket"></i>   Bioskop</span>
   <span class="spacer"></span>
-  <a routerLink="/" mat-button>Home</a>
-  <a routerLink="/search" mat-button>Search</a>
+  <a routerLink="/" mat-button>Početna</a>
+  <a routerLink="/login" mat-button *ngIf="!userService.hasCurrentUser(); else profile">Uloguj se</a>
 </mat-toolbar>
-
+<ng-template #profile>
+  <a routerLink="/profile" mat-button>Profil</a>
+</ng-template>
 <router-outlet />
